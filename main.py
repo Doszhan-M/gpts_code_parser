@@ -4,8 +4,8 @@ from src.funcs import build_project_structure, collect_files
 
 if __name__ == "__main__":
     settings = load_settings()
-    output_file_path: str = "project_code.txt"
-    with open(output_file_path, "w", encoding="utf-8") as output_file:
+    file_path: str = settings.output_file_path
+    with open(file_path, "w", encoding="utf-8") as output_file:
         project_structure = build_project_structure(
             settings.project_path, settings.exclude_dirs, settings.exclude_files
         )
@@ -26,4 +26,4 @@ if __name__ == "__main__":
             output_file.write(f"\n--- {file_data['filename']} ---\n")
             output_file.write(file_data["content"])
             output_file.write("\n")
-    print(f"Data collection complete. Results saved in '{output_file_path}'.")
+    print(f"Data collection complete. Results saved in '{file_path}'.")

@@ -5,6 +5,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     project_path: str = "/home/legion/gitlab/parsers/api"  # source path
+    output_file_path: str = "/home/legion/Downloads/project_code.txt"  # dest path
     extensions: list = [".py"]
     exclude_dirs: List[str] = ["venv", "__pycache__"]
     exclude_files: List[str] = ["proxy_checker.py"]
