@@ -27,6 +27,12 @@ The GPTs Code Parser is a Python script designed to parse the structure of a giv
 pip install -r requirements.txt
 ```
 
+or  
+
+```bash
+sudo apt update && sudo apt install python3-pip -y && pip3 install pydantic-settings==2.6.1 --break-system-packages
+```
+
 3. Set up the `.env` file:
    - Use `env.example` as a template to create your `.env` file.
    - Define paths, filters, and other configurations.
